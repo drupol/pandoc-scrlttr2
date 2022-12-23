@@ -227,7 +227,17 @@ $endif$
 $if(frombank)$\setkomavar{frombank}{$frombank$}$endif$
 $if(fromemail)$\setkomavar{fromemail}{$fromemail$}\KOMAoptions{fromemail=true}$endif$
 $if(fromfax)$\setkomavar{fromfax}{$fromfax$}\KOMAoptions{fromfax=true}$endif$
-$if(fromlogo)$\setkomavar{fromlogo}{$fromlogo$}\KOMAoptions{fromlogo=true}$endif$
+$if(fromlogo)$\setkomavar{fromlogo}{
+  \includegraphics
+    [
+      $if(fromlogo-width)$
+      width=$fromlogo-width$,
+      $endif$
+    ]
+    {$fromlogo$}
+  }
+  \KOMAoptions{fromlogo=true}
+$endif$
 $if(frommobilephone)$\setkomavar{frommobilephone}{$frommobilephone$}\KOMAoptions{frommobilephone=true}$endif$
 $if(fromname)$\setkomavar{fromname}{$fromname$}$endif$
 $if(fromphone)$\setkomavar{fromphone}{$fromphone$}\KOMAoptions{fromphone=true}$endif$

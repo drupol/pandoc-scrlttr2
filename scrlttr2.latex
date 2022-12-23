@@ -277,6 +277,8 @@ $if(opening)$\setkomavar{opening}{$opening$}$endif$
 $if(closing)$\setkomavar{closing}{$closing$}$endif$
 $if(firstfoot)$\setkomavar{firstfoot}{$firstfoot$}$endif$
 
+% To align the signature on the left
+\renewcommand\raggedsignature{\raggedright}
 
 
 

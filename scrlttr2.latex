@@ -315,6 +315,12 @@ $if(ps)$\ps{$ps$}$endif$
 
 $if(encl)$\encl{$encl$}$endif$
 
+$if(cc)$
+  $for(cc)$
+    $cc$$sep$\\
+  $endfor$
+$endif$
+
 $if(natbib)$
 $if(bibliography)$
 $if(biblio-title)$

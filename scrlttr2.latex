@@ -263,8 +263,14 @@ $if(subject)$\setkomavar{subject}{$subject$}$endif$
 $if(subjectseparator)$\setkomavar{subjectseparator}{$subjectseparator$}$endif$
 $if(specialmail)$\setkomavar{specialmail}{$specialmail$}$endif$
 $if(title)$\setkomavar{title}{$title$}$endif$
-$if(toaddress)$\setkomavar{toaddress}{$toaddress$}\KOMAoptions{toaddress=true}$endif$
-$if(toname)$\setkomavar{toname}{$toname$}\KOMAoptions{toname=true}$endif$
+$if(toaddress)$
+  \setkomavar{toaddress}{
+    $for(toaddress)$
+      $toaddress$$sep$\\
+    $endfor$
+  }
+$endif$
+$if(toname)$\setkomavar{toname}{$toname$}$endif$
 $if(yourmail)$\setkomavar{yourmail}{$yourmail$}$endif$
 $if(yourref)$\setkomavar{yourref}{$yourref$}$endif$
 $if(opening)$\setkomavar{opening}{$opening$}$endif$

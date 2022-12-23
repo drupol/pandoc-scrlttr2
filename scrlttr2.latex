@@ -243,11 +243,13 @@ $if(fromname)$\setkomavar{fromname}{$fromname$}$endif$
 $if(fromphone)$\setkomavar{fromphone}{$fromphone$}\KOMAoptions{fromphone=true}$endif$
 $if(fromurl)$\setkomavar{fromurl}{$fromurl$}\KOMAoptions{fromurl=true}$endif$
 $if(fromzipcode)$\setkomavar{fromzipcode}{$fromzipcode$}$endif$
+$if(zipcodeseparator)$\setkomavar{zipcodeseparator}{$zipcodeseparator$}$endif$
 $if(invoice)$\setkomavar{invoice}{$invoice$}$endif$
 $if(location)$\setkomavar{location}{$location$}$endif$
 $if(myref)$\setkomavar{myref}{$myref$}$endif$
 $if(myrefname)$\setkomavar*{myref}{$myrefname$}$endif$
 $if(place)$\setkomavar{place}{$place$}$endif$
+$if(placeseparator)$\setkomavar{placeseparator}{$placeseparator$}$endif$
 $if(PPdatamatrix)$\setkomavar{PPdatamatrix}{$PPdatamatrix$}$endif$
 $if(PPcode)$\setkomavar{PPcode}{$PPcode$}$endif$
 $if(signature)$\setkomavar{signature}{$signature$}$endif$

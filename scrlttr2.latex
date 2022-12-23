@@ -292,7 +292,12 @@ $endif$
 \begin{document}
 
 \begin{letter}{%
-$to$
+$if(to)$
+$to$\\
+$endif$
+$for(toaddress)$
+  $toaddress$$sep$\\
+$endfor$
 }
 
 $for(include-before)$

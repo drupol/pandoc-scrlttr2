@@ -208,15 +208,6 @@ $endif$
 \newkomavar{opening}
 \newkomavar{closing}
 
-% Default to disabled fields, can be overridden by setting pandoc variables or .lco files
-\KOMAoptions{fromemail=false}
-\KOMAoptions{fromfax=false}
-\KOMAoptions{fromlogo=false}
-\KOMAoptions{frommobilephone=false}
-\KOMAoptions{fromphone=false}
-\KOMAoptions{fromurl=false}
-\KOMAoptions{fromalign=right}
-
 $for(letteroption)$
 \LoadLetterOption{$letteroption$}
 $endfor$

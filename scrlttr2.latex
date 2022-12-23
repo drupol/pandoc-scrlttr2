@@ -257,8 +257,11 @@ $if(signature)$
     $if(signature-before)$\vspace*{$signature-before$}$endif$\includegraphics$if(signature-width)$[width=$signature-width$]$endif${$signature$}$if(author)$\\$if(signature-after)$\vspace*{$signature-after$}$endif$$for(author)$$author$$sep$\\$endfor$$endif$
   }
 $endif$
+$if(phoneseparator)$\setkomavar{phoneseparator}{$phoneseparator$}$endif$
 $if(specialmail)$\setkomavar{specialmail}{$specialmail$}$endif$
 $if(subject)$\setkomavar{subject}{$subject$}$endif$
+$if(subjectseparator)$\setkomavar{subjectseparator}{$subjectseparator$}$endif$
+$if(specialmail)$\setkomavar{specialmail}{$specialmail$}$endif$
 $if(title)$\setkomavar{title}{$title$}$endif$
 $if(toaddress)$\setkomavar{toaddress}{$toaddress$}\KOMAoptions{toaddress=true}$endif$
 $if(toname)$\setkomavar{toname}{$toname$}\KOMAoptions{toname=true}$endif$

@@ -252,7 +252,11 @@ $if(place)$\setkomavar{place}{$place$}$endif$
 $if(placeseparator)$\setkomavar{placeseparator}{$placeseparator$}$endif$
 $if(PPdatamatrix)$\setkomavar{PPdatamatrix}{$PPdatamatrix$}$endif$
 $if(PPcode)$\setkomavar{PPcode}{$PPcode$}$endif$
-$if(signature)$\setkomavar{signature}{$signature$}$endif$
+$if(signature)$
+  \setkomavar{signature}{
+    $if(signature-before)$\vspace*{$signature-before$}$endif$\includegraphics$if(signature-width)$[width=$signature-width$]$endif${$signature$}$if(author)$\\$if(signature-after)$\vspace*{$signature-after$}$endif$$for(author)$$author$$sep$\\$endfor$$endif$
+  }
+$endif$
 $if(specialmail)$\setkomavar{specialmail}{$specialmail$}$endif$
 $if(subject)$\setkomavar{subject}{$subject$}$endif$
 $if(title)$\setkomavar{title}{$title$}$endif$

@@ -218,11 +218,7 @@ $if(fromalign)$\KOMAoptions{fromalign=$fromalign$}$endif$
 $if(customer)$\setkomavar{customer}{$customer$}$endif$
 $if(date)$\setkomavar{date}{$date$}$endif$
 $if(fromaddress)$
-  \setkomavar{fromaddress}{
-    $for(fromaddress)$
-        $fromaddress$$sep$\\
-    $endfor$
-  }
+  \setkomavar{fromaddress}{$for(fromaddress)$$fromaddress$$sep$\\$endfor$}
 $endif$
 $if(frombank)$\setkomavar{frombank}{$frombank$}$endif$
 $if(fromemail)$\setkomavar{fromemail}{$fromemail$}\KOMAoptions{fromemail=true}$endif$
@@ -236,7 +232,6 @@ $if(fromlogo)$\setkomavar{fromlogo}{
     ]
     {$fromlogo$}
   }
-  \KOMAoptions{fromlogo=true}
 $endif$
 $if(frommobilephone)$\setkomavar{frommobilephone}{$frommobilephone$}\KOMAoptions{frommobilephone=true}$endif$
 $if(fromname)$\setkomavar{fromname}{$fromname$}$endif$
@@ -264,11 +259,7 @@ $if(subjectseparator)$\setkomavar{subjectseparator}{$subjectseparator$}$endif$
 $if(specialmail)$\setkomavar{specialmail}{$specialmail$}$endif$
 $if(title)$\setkomavar{title}{$title$}$endif$
 $if(toaddress)$
-  \setkomavar{toaddress}{
-    $for(toaddress)$
-      $toaddress$$sep$\\
-    $endfor$
-  }
+  \setkomavar{toaddress}{$for(toaddress)$$toaddress$$sep$\\$endfor$}
 $endif$
 $if(toname)$\setkomavar{toname}{$toname$}$endif$
 $if(yourmail)$\setkomavar{yourmail}{$yourmail$}$endif$
@@ -293,11 +284,11 @@ $endif$
 
 \begin{letter}{%
 $if(to)$
-$to$\\
+$for(to)$$to$$sep$\\$endfor$\\
 $endif$
-$for(toaddress)$
-  $toaddress$$sep$\\
-$endfor$
+$if(toaddress)$
+$for(toaddress)$$toaddress$$sep$\\$endfor$
+$endif$
 }
 
 $for(include-before)$
@@ -316,9 +307,7 @@ $if(ps)$\ps{$ps$}$endif$
 $if(encl)$\encl{$encl$}$endif$
 
 $if(cc)$
-  $for(cc)$
-    $cc$$sep$\\
-  $endfor$
+  \cc{$for(cc)$$cc$$sep$\\$endfor$}
 $endif$
 
 $if(natbib)$

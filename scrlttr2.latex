@@ -275,7 +275,7 @@ $endif$
 
 \begin{letter}{%
 $if(to)$
-$for(to)$$to$$sep$\\$endfor$\\
+$for(to)$$to$$sep$\\$endfor$
 $endif$
 $if(toaddress)$
 $for(toaddress)$$toaddress$$sep$\\$endfor$
